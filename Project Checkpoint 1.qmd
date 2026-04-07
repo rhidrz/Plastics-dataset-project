@@ -31,9 +31,33 @@ plastics <- tuesdata$plastics
 plastics <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2021/2021-01-26/plastics.csv')
 
 ```
+
+
 **Visualization 1**
 ```{r}
+library(tidyverse) 
 
+plastics %>%
+  group_by(parent_company) %>%
+  summarise(total = sum(grand_total, na.rm = TRUE)) %>%
+  slice_max(total, n = 10) %>%
+  ggplot(aes(x = reorder(parent_company, total), y = total)) +
+  geom_col() +
+  coord_flip() +
+  labs(title = "Top 10 Companies", x = "Company", y = "Total Plastic")
 ```
 
+
+**visualization 2**
+```{r}
+plastics %>%
+  group_by(year) %>%
+  summarise(total = sum(grand_total, na.rm = TRUE)) %>%
+  ggplot(aes(x = year, y = total)) +
+  geom_line() +
+  geom_point() +
+  labs(title = "Total Plastic Pollution Over Time",
+       x = "Year",
+       y = "Total Plastic")
+```
 
