@@ -20,7 +20,7 @@ What companies are the largest contributors to plastic waste and pollution
 Does plastic composition vary across countries
 
 ```{r}
-install.packages("tidytuesdayR")
+
 
 tuesdata <- tidytuesdayR::tt_load('2021-01-26')
 tuesdata <- tidytuesdayR::tt_load(2021, week = 5)
