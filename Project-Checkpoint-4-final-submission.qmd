@@ -198,8 +198,7 @@ total_results <- bind_rows(
 tr_2019 <- total_results[total_results$year %in% c(2019), ]
 ```
 
-----------------------------------------------------------------
-----------------------------------------------------------------
+## ----------------------------------------------------------------
 
 # Start of Checkpoint 4
 
@@ -385,10 +384,15 @@ plastic_by_region <- plastic_with_region %>%
 print(plastic_by_region)
 ```
 
-----------------------------------------------------------------
-----------------------------------------------------------------
+## ----------------------------------------------------------------
 
 # Source #2:
+
+## How Does a Countries GDP and total Volunteers affect their Clean up efficiency when looking at regions on Earth
+
+## Context
+
+For our second research question, Our analysis like research question 1 is also limited to countries included in the TidyTuesday plastics data set containing data from 2019, due to this limitation our data will not be applicable to all countries and will be limited to that of our plastics data set. Our Question sparked into our minds by wondering about different country sizes in the data-set. These countries in the data set don't all have the same population sizes, some are drastically larger than other, we then thought about the volunteer sizes, we thought if they have more volunteers would their clean up efficiency be better? Prior actually finding any evidence we thought that maybe those countries with higher volunteer sizes would have a better cleaning efficiency. Now alongside that we though about another variable GDP, we were thinking wouldn't those with higher GDP's also have better cleaning efficiency due to more money and resources being available. We then took this a step further and wanted to determine if there was an interaction between GDP, Volunteer size, and cleaning efficiency. Now that we had this part of the question done, we though of one more thing what about region, how would regions interact with these variables, now not all regions of the world have the same population sizes, volunteers or money so we thought that could draw us to an even more statistically significant conclusion. We would expect those regions such as Asia, Europe and the Americas to have the highest cleanup efficiency due to their higher populations and overall GDP's.
 
 We are choosing to utilize API-Ninjas API to gather country GDP and determine whether there is a pattern between a countries GDP and their total number of volunteers.
 
@@ -661,3 +665,13 @@ ggplot(cleanup_country_year, aes(x = total_volunteers, y = avg_efficiency)) +
   ) +
   theme_minimal()
 ```
+
+# 
+
+## Interpretation
+
+H₀: There is no association between a country's clean up efficiency and their number of volunteers
+
+Hₐ: There is an association between a country's clean up efficiency and their number of volunteers
+
+We are choosing to utilize API-Ninjas API to gather country GDP and determine whether there is a pattern between a countries GDP and their total number of volunteers.
